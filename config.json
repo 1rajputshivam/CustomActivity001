@@ -1,0 +1,54 @@
+{
+  "workflowApiVersion": "1.1",
+  "type": "REST",
+
+  "metaData": {
+    "icon": "https://your-domain.com/icon.png",
+    "category": "custom"
+  },
+
+  "applicationExtensionKey": "daytime-window-check",
+
+  "lang": {
+    "en-US": {
+      "name": "Daytime Window Check",
+      "description": "Checks whether current time is within allowed sending window"
+    }
+  },
+
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        { "subscriberKey": "{{Contact.Key}}" },
+        { "country": "" }
+      ],
+      "url": "https://your-domain.com/activity/execute",
+      "verb": "POST",
+      "format": "json",
+      "timeout": 30000
+    }
+  },
+
+  "configurationArguments": {
+    "save": {
+      "url": "https://your-domain.com/activity/save",
+      "verb": "POST"
+    },
+    "publish": {
+      "url": "https://your-domain.com/activity/publish",
+      "verb": "POST"
+    },
+    "validate": {
+      "url": "https://your-domain.com/activity/validate",
+      "verb": "POST"
+    }
+  },
+
+  "userInterfaces": {
+    "configModal": {
+      "url": "https://your-domain.com/index.html",
+      "height": 600,
+      "width": 600
+    }
+  }
+}
