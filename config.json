@@ -3,7 +3,7 @@
   "type": "REST",
 
   "metaData": {
-    "icon": "https://your-domain.com/icon.png",
+    "icon": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/icon.png",
     "category": "custom"
   },
 
@@ -22,7 +22,7 @@
         { "subscriberKey": "{{Contact.Key}}" },
         { "country": "" }
       ],
-      "url": "https://your-domain.com/activity/execute",
+      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/execute",
       "verb": "POST",
       "format": "json",
       "timeout": 30000
@@ -31,22 +31,22 @@
 
   "configurationArguments": {
     "save": {
-      "url": "https://your-domain.com/activity/save",
+      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/save",
       "verb": "POST"
     },
     "publish": {
-      "url": "https://your-domain.com/activity/publish",
+      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/publish",
       "verb": "POST"
     },
     "validate": {
-      "url": "https://your-domain.com/activity/validate",
+      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/validate",
       "verb": "POST"
     }
   },
 
   "userInterfaces": {
     "configModal": {
-      "url": "https://your-domain.com/index.html",
+      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/index.html",
       "height": 600,
       "width": 600
     }
