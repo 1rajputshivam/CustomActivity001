@@ -20,6 +20,12 @@
         { "subscriberKey": "{{Contact.Key}}" },
         { "country": "" }
       ],
+      "outArguments": [
+        {
+          "allowSend":"default",
+          "nextSendTimeUTC": "default"
+        }
+      ],
       "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/execute",
       "verb": "POST",
       "format": "json",
@@ -68,6 +74,20 @@
               "dataType": "Text",
               "isNullable": false,
               "direction": "in"
+            }
+          }
+        ],
+        "outArguments": [
+          {
+            "allowSend": {
+              "dataType": "Boolean",
+              "isNullable": false,
+              "direction": "out"
+            },
+            "nextSendTimeUTC": {
+              "dataType": "Date",
+              "isNullable": false,
+              "direction": "out"
             }
           }
         ]
