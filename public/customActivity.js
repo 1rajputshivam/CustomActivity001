@@ -4,12 +4,6 @@ window.onload = function () {
 
   connection.trigger('ready');
 
-  // REQUIRED
-  connection.trigger('requestInteraction', {
-    interactionType: 'Button',
-    callback: 'clickedNext'
-  });
-
   connection.on('initActivity', data => {
     payload = data || {};
 
@@ -29,10 +23,10 @@ window.onload = function () {
     payload.arguments = payload.arguments || {};
     payload.arguments.execute = payload.arguments.execute || {};
     payload.arguments.execute.inArguments = [
-      { subscriberKey: '{{Contact.Key}}' },
       { country }
     ];
 
+    payload.metaData = payload.metaData || {};
     payload.metaData.isConfigured = true;
     payload.metaData.label = `Country: ${country}`;
     payload.name = `Window Check (${country})`;
