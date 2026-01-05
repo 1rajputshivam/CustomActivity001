@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -28,7 +28,7 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-      
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
@@ -51,13 +51,13 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F6B3305E36384FA589E99562471AD802 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B3F483CBE0BC49F395A087D193E3CBDF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D843BD7B1C3941619B1CC0DB924D3061 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D8C60DD5A4B242A5931A6B445BBCEEE6 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_31ADA933041F40AFBED453B80B2FCA7F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_54D6801079DA4313A386F9368C2CD0F4 }}
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
         with:
           app-name: 'customactivity-sendwindow'
           slot-name: 'Production'
