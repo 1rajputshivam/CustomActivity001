@@ -26,7 +26,7 @@
           "nextSendTimeUTC": "default"
         }
       ],
-      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/execute",
+      "url": "https://customactivity001-production.up.railway.app/activity/execute",
       "verb": "POST",
       "format": "json",
       "timeout": 30000,
@@ -38,22 +38,22 @@
 
   "configurationArguments": {
     "save": {
-      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/save",
+      "url": "https://customactivity001-production.up.railway.app/activity/save",
       "verb": "POST"
     },
     "publish": {
-      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/publish",
+      "url": "https://customactivity001-production.up.railway.app/activity/publish",
       "verb": "POST"
     },
     "validate": {
-      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/activity/validate",
+      "url": "https://customactivity001-production.up.railway.app/activity/validate",
       "verb": "POST"
     }
   },
 
   "userInterfaces": {
     "configModal": {
-      "url": "https://customactivity-d2fhehdre4hhdpev.centralindia-01.azurewebsites.net/index.html",
+      "url": "https://customactivity001-production.up.railway.app/index.html",
       "height": 600,
       "width": 600
     }
